@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer Quran Program 2026 – House of Quran</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0F2235;
+    --gold: #D4A847;
+    --gold-light: #e8c96b;
+    --cream: #F5EDD8;
+    --cream-dark: #EDE3C8;
+    --text: #0F2235;
+    --text-muted: rgba(15,34,53,0.55);
+    --text-faint: rgba(15,34,53,0.35);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    font-family: 'Amiri', serif;
+    font-size: clamp(280px, 30vw, 480px);
+    color: rgba(212,168,71,0.06);
+    direction: rtl;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-left {
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 6vw, 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+
+  .hero-brand-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .hero-brand-name {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(245,237,216,0.45);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 6vw, 80px);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.0;
+    margin-bottom: 28px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(245,237,216,0.65);
+    line-height: 1.75;
+    max-width: 420px;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 28px;
+    transition: background 0.2s;
+    width: fit-content;
+  }
+
+  .hero-cta:hover { background: var(--gold-light); }
+
+  .hero-cta-arrow {
+    font-size: 16px;
+    transition: transform 0.2s;
+  }
+
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+
+  .hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .hero-stat {
+    padding: 24px 28px;
+    border: 1px solid rgba(212,168,71,0.15);
+    position: relative;
+  }
+
+  .hero-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .hero-stat:hover::before { opacity: 1; }
+
+  .hero-stat-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .hero-stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .hero-stat-sub {
+    font-size: 11px;
+    color: rgba(245,237,216,0.45);
+    margin-top: 4px;
+  }
+
+  /* ── GOLD BAR ── */
+  .gold-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  }
+
+  /* ── AYAH BAND ── */
+  .ayah-band {
+    background: var(--cream-dark);
+    padding: 28px clamp(40px, 8vw, 100px);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid rgba(15,34,53,0.1);
+  }
+
+  .ayah-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    color: var(--gold);
+    direction: rtl;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .ayah-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(15,34,53,0.15);
+    flex-shrink: 0;
+  }
+
+  .ayah-translation {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  /* ── SHARED SECTION STYLES ── */
+  .section {
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+  }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-heading em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .section-body {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 580px;
+  }
+
+  /* ── TRACKS ── */
+  .tracks-section {
+    background: var(--navy);
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+  }
+
+  .tracks-section .section-label { color: rgba(212,168,71,0.6); }
+  .tracks-section .section-heading { color: var(--cream); }
+  .tracks-section .section-heading em { color: var(--gold); }
+
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .track-card {
+    border: 1px solid rgba(212,168,71,0.2);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .track-card:hover { border-color: var(--gold); }
+
+  .track-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+  }
+
+  .track-tag {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .track-days {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  .track-time {
+    font-size: 13px;
+    color: rgba(245,237,216,0.5);
+  }
+
+  .track-detail {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212,168,71,0.15);
+    font-size: 12px;
+    color: rgba(245,237,216,0.4);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── WHAT YOU'LL LEARN ── */
+  .learn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: rgba(15,34,53,0.12);
+    margin-top: 48px;
+    border: 1px solid rgba(15,34,53,0.12);
+  }
+
+  .learn-card {
+    background: var(--cream);
+    padding: 32px 28px;
+    transition: background 0.2s;
+  }
+
+  .learn-card:hover { background: #EDE3C8; }
+
+  .learn-icon {
+    font-family: 'Amiri', serif;
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .learn-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .learn-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── SESSION STRUCTURE ── */
+  .structure-section {
+    background: var(--cream-dark);
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+    border-top: 1px solid rgba(15,34,53,0.1);
+    border-bottom: 1px solid rgba(15,34,53,0.1);
+  }
+
+  .structure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 48px;
+    align-items: start;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 39px;
+    top: 44px;
+    bottom: -1px;
+    width: 1px;
+    background: rgba(15,34,53,0.12);
+  }
+
+  .timeline-time {
+    padding-top: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-align: right;
+  }
+
+  .timeline-content {
+    padding: 12px 0 28px;
+    border-top: 1px solid rgba(15,34,53,0.1);
+  }
+
+  .timeline-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .timeline-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .structure-note {
+    background: var(--navy);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .structure-note::after {
+    content: 'اقرأ';
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    font-family: 'Amiri', serif;
+    font-size: 120px;
+    color: rgba(212,168,71,0.07);
+    direction: rtl;
+    pointer-events: none;
+  }
+
+  .note-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .note-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--cream);
+    line-height: 1.6;
+  }
+
+  .note-text strong { color: var(--gold); font-weight: 700; }
+
+  /* ── CURRICULUM ── */
+  .curriculum-section {
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+  }
+
+  .curriculum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 48px;
+    align-items: start;
+  }
+
+  .curriculum-block {
+    border: 1px solid rgba(15,34,53,0.15);
+    overflow: hidden;
+  }
+
+  .curriculum-block-header {
+    background: var(--navy);
+    padding: 20px 24px;
+  }
+
+  .curriculum-block-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+  }
+
+  .curriculum-block-sub {
+    font-size: 11px;
+    color: rgba(245,237,216,0.45);
+    margin-top: 4px;
+  }
+
+  .curriculum-block-body {
+    padding: 24px;
+  }
+
+  .curriculum-block-body p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .surah-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  .surah-tag {
+    font-family: 'Amiri', serif;
+    font-size: 14px;
+    color: var(--navy);
+    background: var(--cream-dark);
+    padding: 4px 10px;
+    border: 1px solid rgba(15,34,53,0.12);
+  }
+
+  /* ── TEACHER ── */
+  .teacher-section {
+    background: var(--navy);
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+  }
+
+  .teacher-section .section-label { color: rgba(212,168,71,0.6); }
+
+  .teacher-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+    border: 1px solid rgba(212,168,71,0.2);
+    margin-top: 40px;
+    overflow: hidden;
+  }
+
+  .teacher-left {
+    background: rgba(212,168,71,0.08);
+    padding: 40px 32px;
+    border-right: 1px solid rgba(212,168,71,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .teacher-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .teacher-creds {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cred-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cred-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .cred-text {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(245,237,216,0.6);
+    letter-spacing: 0.5px;
+  }
+
+  .teacher-right {
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .teacher-bio {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(245,237,216,0.65);
+    line-height: 1.8;
+  }
+
+  /* ── PRICING ── */
+  .pricing-section {
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+    background: var(--cream-dark);
+    border-top: 1px solid rgba(15,34,53,0.1);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .price-card {
+    border: 1px solid rgba(15,34,53,0.15);
+    padding: 28px;
+    background: var(--cream);
+  }
+
+  .price-card.featured {
+    border-color: var(--gold);
+    background: var(--navy);
+  }
+
+  .price-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .price-card.featured .price-amount { color: var(--cream); }
+
+  .price-amount span {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  .price-card.featured .price-amount span { color: rgba(245,237,216,0.5); }
+
+  .price-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+
+  .price-card.featured .price-desc { color: rgba(245,237,216,0.55); }
+
+  /* ── FORM SECTION ── */
+  .form-section {
+    padding: clamp(60px, 8vw, 100px) clamp(40px, 8vw, 100px);
+    background: var(--navy);
+  }
+
+  .form-section .section-label { color: rgba(212,168,71,0.6); }
+
+  .form-section .section-heading { color: var(--cream); }
+
+  .form-section .section-body { color: rgba(245,237,216,0.55); }
+
+  .form-wrapper {
+    margin-top: 48px;
+    border: 1px solid rgba(212,168,71,0.2);
+    overflow: hidden;
+  }
+
+  .form-wrapper iframe {
+    width: 100%;
+    min-height: 900px;
+    border: none;
+    display: block;
+    background: white;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(212,168,71,0.15);
+    padding: 32px clamp(40px, 8vw, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-brand-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .footer-brand-name {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .footer-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: rgba(245,237,216,0.45);
+    text-decoration: none;
+  }
+
+  .footer-link:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .tracks-grid { grid-template-columns: 1fr; }
+    .learn-grid { grid-template-columns: 1fr; }
+    .structure-grid { grid-template-columns: 1fr; gap: 40px; }
+    .curriculum-grid { grid-template-columns: 1fr; }
+    .teacher-card { grid-template-columns: 1fr; }
+    .teacher-left { border-right: none; border-bottom: 1px solid rgba(212,168,71,0.2); }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .ayah-band { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .ayah-divider { display: none; }
+    .footer { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">اقرأ</div>
+  <div class="hero-left">
+    <div class="hero-brand">
+      <div class="hero-brand-dot"></div>
+      <div class="hero-brand-name">House of Quran</div>
+    </div>
+    <div class="hero-eyebrow">Summer 2026 · Online Program</div>
+    <h1 class="hero-title">Recite.<br><em>Understand.</em><br>Connect.</h1>
+    <p class="hero-desc">A small-group online Quran program for middle and high school students — combining personalized recitation feedback with meaningful discussion of the Quran's message.</p>
+    <a href="#register" class="hero-cta">Register Now <span class="hero-cta-arrow">→</span></a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-label">Format</div>
+        <div class="hero-stat-value">Live on Zoom</div>
+        <div class="hero-stat-sub">Interactive · Real-time feedback</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Duration</div>
+        <div class="hero-stat-value">July – August 2026</div>
+        <div class="hero-stat-sub">2 hours per session · 2x per week</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">Cohort Size</div>
+        <div class="hero-stat-value">Max 6–7 Students</div>
+        <div class="hero-stat-sub">Personal attention guaranteed</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-label">For</div>
+        <div class="hero-stat-value">Middle & High School</div>
+        <div class="hero-stat-sub">All recitation levels welcome</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-bar"></div>
+
+<!-- AYAH BAND -->
+<div class="ayah-band">
+  <div class="ayah-arabic">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</div>
+  <div class="ayah-divider"></div>
+  <div class="ayah-translation">"Read in the name of your Lord who created" — Surah Al-Alaq, 96:1</div>
+</div>
+
+<!-- TRACKS -->
+<section class="tracks-section">
+  <div class="section-label">Schedule</div>
+  <h2 class="section-heading">Choose Your <em>Track</em></h2>
+  <div class="tracks-grid">
+    <div class="track-card">
+      <div class="track-tag">Track A</div>
+      <div class="track-days">Monday &<br>Wednesday</div>
+      <div class="track-time">5:00 PM – 7:00 PM EST</div>
+      <div class="track-detail">Starting July 7, 2026 · 2 sessions per week</div>
+    </div>
+    <div class="track-card">
+      <div class="track-tag">Track B</div>
+      <div class="track-days">Tuesday &<br>Thursday</div>
+      <div class="track-time">5:00 PM – 7:00 PM EST</div>
+      <div class="track-detail">Starting July 8, 2026 · 2 sessions per week</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="section">
+  <div class="section-label">Program Focus</div>
+  <h2 class="section-heading">What Students <em>Gain</em></h2>
+  <p class="section-body">Each session is designed around three interlocking goals — so students don't just learn to read, they learn to connect.</p>
+  <div class="learn-grid">
+    <div class="learn-card">
+      <span class="learn-icon">تلاوة</span>
+      <div class="learn-title">Quran Reading</div>
+      <p class="learn-desc">Every student gets dedicated one-on-one recitation time each session — no group reading where one person reads while others wait.</p>
+    </div>
+    <div class="learn-card">
+      <span class="learn-icon">تجويد</span>
+      <div class="learn-title">Tajweed Feedback</div>
+      <p class="learn-desc">Personalized correction tailored to each student's level, building real fluency and confidence in how the Quran is recited.</p>
+    </div>
+    <div class="learn-card">
+      <span class="learn-icon">تدبر</span>
+      <div class="learn-title">Meaning & Reflection</div>
+      <p class="learn-desc">Group discussion on what each surah is actually saying — and how its message speaks directly to the lives of young Muslims today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION STRUCTURE -->
+<section class="structure-section">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-heading">A Session, <em>Step by Step</em></h2>
+  <div class="structure-grid">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">15 min<br>× 4</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Individual Recitation</div>
+          <p class="timeline-desc">Each student reads one-on-one with Ustadh Umar, receiving live tajweed correction and personal feedback.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">30 min</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Group Tafsir & Discussion</div>
+          <p class="timeline-desc">All students join for a guided discussion on the meaning and themes of the passage — connecting the Quran to real life.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">10 min</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Q&A & Wrap-Up</div>
+          <p class="timeline-desc">Open floor for questions, reflections, and closing. Students leave with something to think about until next session.</p>
+        </div>
+      </div>
+    </div>
+    <div class="structure-note">
+      <div class="note-label">Why This Structure</div>
+      <p class="note-text">Most online Quran programs waste time — one student reads while everyone else waits. This program is built differently: <strong>every student gets real attention</strong>, and every student gets real discussion. Small cohorts make both possible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum-section">
+  <div class="section-label">Curriculum</div>
+  <h2 class="section-heading">What We <em>Study</em></h2>
+  <p class="section-body">We cover two bodies of text across the summer — one that grounds us in salah, and one that speaks directly to the questions young Muslims are already living.</p>
+  <div class="curriculum-grid">
+    <div class="curriculum-block">
+      <div class="curriculum-block-header">
+        <div class="curriculum-block-title">Surah Al-Fatiha</div>
+        <div class="curriculum-block-sub">The Opening · Sessions 1–3</div>
+      </div>
+      <div class="curriculum-block-body">
+        <p>The most repeated passage in any Muslim's life — recited at least 17 times daily in salah — yet rarely understood. We open the summer here, building the foundation that the rest of the program stands on.</p>
+      </div>
+    </div>
+    <div class="curriculum-block">
+      <div class="curriculum-block-header">
+        <div class="curriculum-block-title">Surah Ad-Duha → An-Naas</div>
+        <div class="curriculum-block-sub">Juz Amma · Sessions 4 onward</div>
+      </div>
+      <div class="curriculum-block-body">
+        <p>Short surahs, deep themes. Gratitude, anxiety, purpose, accountability, seeking protection — exactly what young Muslims are navigating every day. Most students have memorized these surahs; this summer they'll finally know what they're saying.</p>
+        <div class="surah-tags">
+          <span class="surah-tag">الضحى</span>
+          <span class="surah-tag">الشرح</span>
+          <span class="surah-tag">التين</span>
+          <span class="surah-tag">العلق</span>
+          <span class="surah-tag">القدر</span>
+          <span class="surah-tag">البينة</span>
+          <span class="surah-tag">الزلزلة</span>
+          <span class="surah-tag">العاديات</span>
+          <span class="surah-tag">القارعة</span>
+          <span class="surah-tag">التكاثر</span>
+          <span class="surah-tag">العصر</span>
+          <span class="surah-tag">الهمزة</span>
+          <span class="surah-tag">الفيل</span>
+          <span class="surah-tag">قريش</span>
+          <span class="surah-tag">الماعون</span>
+          <span class="surah-tag">الكوثر</span>
+          <span class="surah-tag">الكافرون</span>
+          <span class="surah-tag">النصر</span>
+          <span class="surah-tag">المسد</span>
+          <span class="surah-tag">الإخلاص</span>
+          <span class="surah-tag">الفلق</span>
+          <span class="surah-tag">الناس</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHER -->
+<section class="teacher-section">
+  <div class="section-label">Your Teacher</div>
+  <div class="teacher-card">
+    <div class="teacher-left">
+      <div class="teacher-name">Ustadh Umar Kabiruddin</div>
+      <div class="teacher-creds">
+        <div class="cred-item"><div class="cred-dot"></div><span class="cred-text">Alimiyyah</span></div>
+        <div class="cred-item"><div class="cred-dot"></div><span class="cred-text">Hafiz</span></div>
+        <div class="cred-item"><div class="cred-dot"></div><span class="cred-text">Qari</span></div>
+        <div class="cred-item"><div class="cred-dot"></div><span class="cred-text">Iftaa Graduate</span></div>
+        <div class="cred-item"><div class="cred-dot"></div><span class="cred-text">Ijazah in the Ten Qira'at</span></div>
+      </div>
+    </div>
+    <div class="teacher-right">
+      <p class="teacher-bio">Ustadh Umar Kabiruddin is a traditionally trained Islamic scholar holding qualifications in Alimiyyah, Iftaa, and an Ijazah in the Ten Qira'at, completed in South Africa. He has taught Islamic studies across institutions in the DMV area including ADAMS Center, Al Salaam Academy, and the Diyanet Center of America, and has served as Imam and Khateeb at various masajid. His teaching focuses on helping young Muslims move beyond rote recitation toward a genuine, living relationship with the Quran.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+  <div class="section-label">Investment</div>
+  <h2 class="section-heading">Simple, <em>Transparent</em> Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card featured">
+      <div class="price-label">Monthly Tuition</div>
+      <div class="price-amount">$150 <span>/ mo</span></div>
+      <p class="price-desc">Per student · July & August<br>Two months, two sessions per week.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Sibling Rate</div>
+      <div class="price-amount">$120 <span>/ mo</span></div>
+      <p class="price-desc">For each additional sibling enrolled in the same program.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Registration Deposit</div>
+      <div class="price-amount">$50</div>
+      <p class="price-desc">Non-refundable. Due within 48 hours of confirmation to hold your spot. Payment via Zelle or Venmo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="register">
+  <div class="section-label">Enrollment</div>
+  <h2 class="section-heading">Register <em>Your Student</em></h2>
+  <p class="section-body">Spots are limited to 6–7 students per cohort. Submit the form below and we'll be in touch within 2–3 business days with your confirmation and payment details.</p>
+  <div class="form-wrapper">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdu7_o7d8LXk_61uOcSuk74Qwq_z2A--l696I376qGGptgl5A/viewform?embedded=true" loading="lazy" title="Summer Quran Program Registration Form">Loading registration form…</iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-brand-dot"></div>
+    <div class="footer-brand-name">House of Quran</div>
+  </div>
+  <a href="https://houseofquran.org" class="footer-link">houseofquran.org</a>
+</footer>
+
+</body>
+</html>
